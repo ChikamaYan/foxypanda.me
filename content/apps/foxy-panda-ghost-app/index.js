@@ -1,0 +1,33 @@
+/**
+ * A JavaScript file.
+ *
+ * @author Timur Kuzhagaliyev <tim@xaerus.co.uk>
+ * @copyright 2016
+ * @license https://opensource.org/licenses/mit-license.php MIT License
+ * @version 0.0.1
+ */
+
+var App = require('ghost-app'),
+    FoxyPandaApp;
+
+FoxyPandaApp = App.extend({
+    install: function () {},
+    uninstall: function () {},
+    activate: function () {
+        this.ghost.helpers.register('masonry', this.masonryHelper);
+    },
+    deactivate: function () {},
+    masonryHelper: function(title) {
+        var length = title.length;
+
+        if(length < 20) {
+            return '';
+        } else if(length < 40) {
+            return ' wide';
+        } else {
+            return ' verywide'
+        }
+    }
+});
+
+module.exports = FoxyPandaApp;
