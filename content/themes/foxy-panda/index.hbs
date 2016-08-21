@@ -3,7 +3,7 @@
 <div id="masonry" class="l-4c">
     {{#foreach posts}}
         <div class="grid-sizer">&nbsp;</div>
-        <a href="{{url}}" class="item {{post_class}}">
+        <a class="foxy-item item {{post_class}}" href="{{url}}" >
             <header class="post-header">
                 <h2 class="post-title">{{title}}</h2>
             </header>
@@ -17,6 +17,6 @@
                 <!--{{tags prefix=" on "}}-->
                 <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
             </footer>
-        </a>
+        </a><!-- .foxy-item -->
     {{/foreach}}
 </div>
