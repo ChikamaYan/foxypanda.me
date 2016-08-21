@@ -2,9 +2,20 @@
 @import "mixins"
 
 .foxy-item
+  margin-bottom: $index-item-margin-bottom !important
   background-color: $index-item-background
-  margin-bottom: $index-item-margin-bottom
   padding: $index-item-padding
   border: $index-item-border
   color: $index-item-text
   text-decoration: none
+  h2
+    font-family: "skolar-sans-latin", sans-serif
+    font-weight: bold
+    &:first-child
+      font-family: "filson-soft", sans-serif
+    &:last-child
+      font-family: "niveau-grotesk", sans-serif
+    &:hover
+      font-weight: normal
+    &:active
+      font-weight: lighter
