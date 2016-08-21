@@ -1,7 +1,12 @@
 @import "variables"
 @import "mixins"
 
+*
+  box-sizing: border-box
+
 body
   background-color: $background
   @include image($texture)
+  position: relative
   color: $text
+  margin: 0
