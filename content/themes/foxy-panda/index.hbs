@@ -3,12 +3,12 @@
 <div id="masonry" class="l-4c">
     {{#foreach posts}}
         <div class="grid-sizer">&nbsp;</div>
-        <a class="item {{post_class}}">
+        <a href="{{url}}" class="item {{post_class}}">
             <header class="post-header">
-                <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+                <h2 class="post-title">{{title}}</h2>
             </header>
             <section class="post-excerpt">
-                <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+                <p>{{excerpt words="26"}}
             </section>
             <footer class="post-meta">
                 {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}"
