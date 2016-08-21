@@ -75,12 +75,12 @@ $media-max-width: 6000px;
         a.item {
             text-align: left;
             margin: 0;
-            @extend .g-l-4;
+            @extend .g-hr-4;
             &.wide {
-                @extend .g-l-8;
+                @extend .g-hr-8;
             }
             &.verywide {
-                @extend .g-l-12;
+                @extend .g-hr-12;
             }
         }
     }

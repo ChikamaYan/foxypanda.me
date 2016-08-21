@@ -2,3 +2,4 @@ node_modules/
 npm-debug.log*
 .idea
 content/themes/casper/
+.sass-cache
