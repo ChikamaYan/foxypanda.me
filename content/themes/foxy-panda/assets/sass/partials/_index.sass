@@ -1,5 +1,6 @@
 @import "variables"
 @import "mixins"
+@import "compass"
 
 .foxy-item
   margin-bottom: $index-item-margin-bottom !important
@@ -7,6 +8,7 @@
   border: $index-item-border
   color: $index-item-text
   text-decoration: none
+  @include clearfix()
   &-inside
     padding: $index-item-padding
     overflow: hidden
@@ -14,5 +16,8 @@
     margin: $index-item-element-margin
   &-excerpt
     text-align: $index-item-excerpt-align
-  &-date
-    display: block
+  &-info
+    time
+      float: left
+    span
+      float: right
