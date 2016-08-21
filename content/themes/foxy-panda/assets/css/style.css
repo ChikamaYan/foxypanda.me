@@ -5,12 +5,16 @@ body {
   background-color: #000;
   background-image: url("../img/simple_dashed.png");
   position: relative;
+  height: 100%;
   color: #fff;
+  width: 100%;
   margin: 0; }
 
 .foxy-wrapper {
   position: absolute;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  left: 0;
+  top: 0; }
 
 /*# sourceMappingURL=style.css.map */
