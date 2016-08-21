@@ -1,6 +1,6 @@
 {
-  "name": "Ghost on Heroku",
-  "description": "Just a blogging platform",
+  "name": "Foxy Panda",
+  "description": "Tim's Concise Blog",
   "logo": "https://cdn.rawgit.com/TryGhost/Ghost-Admin/61fe83dff375a145d5272a5382aa2c72bd994830/public/assets/img/large.png",
   "repository": "https://github.com/cobyism/ghost-on-heroku",
   "success_url": "/ghost",
@@ -11,7 +11,7 @@
   "env": {
     "HEROKU_URL": {
       "description": "The URL of this Heroku app.",
-      "value": "https://YOURAPPNAME.herokuapp.com"
+      "value": "https://foxypanda.herokuapp.com"
     },
     "S3_ACCESS_KEY_ID": {
       "description": "Set your AWS Access Key ID to enable S3 file storage. Leave blank to disable file uploads.",
