@@ -69,4 +69,23 @@ $media-max-width: 767px;
             display: inline !important;
         }
     }
+
+    // Masonry
+    #masonry {
+        div.grid-sizer {
+            width: 19px;
+            margin: 0;
+        }
+        a.item {
+            text-align: left;
+            margin-right: 0;
+            @extend .g-hl-6;
+            &.wide {
+                @extend .g-hl-6;
+            }
+            &.verywide {
+                @extend .g-hl-6;
+            }
+        }
+    }
 }
