@@ -7,7 +7,7 @@
  * @version 0.0.1
  */
 
-$(window).load(function () {
+$(window).on('load', function () {
 
     var $body = $('body');
 
