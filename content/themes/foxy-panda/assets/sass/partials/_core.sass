@@ -29,9 +29,11 @@ h1
   line-height: $line-height * 2
 
 .clear-fix
+  *zoom: 1
   &:before,
   &:after
-    content: " "
     display: table
+    content: ""
+    line-height: 0
   &:after
     clear: both
