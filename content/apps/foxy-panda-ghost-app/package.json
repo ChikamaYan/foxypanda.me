@@ -3,5 +3,10 @@
   "version": "0.0.1",
   "dependencies": {
     "ghost-app": "0.0.3"
+  },
+  "ghost": {
+    "permissions": {
+      "helpers": ["blogPostMiniImage"]
+    }
   }
 }
