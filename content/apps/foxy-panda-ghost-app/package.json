@@ -6,7 +6,7 @@
   },
   "ghost": {
     "permissions": {
-      "helpers": ["blogPostMiniImage"]
+      "helpers": ["masonry"]
     }
   }
 }
