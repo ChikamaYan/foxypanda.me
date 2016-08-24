@@ -17,7 +17,7 @@ FoxyPandaApp = App.extend({
     },
     activate: function () {
         this.ghost.helpers.register('masonry', this.masonryHelper);
-        this.ghost.helpers.register('foxyExcerpt', this.foxyExcerptHelper())
+        this.ghost.helpers.register('foxyExcerpt', this.foxyExcerptHelper)
     },
     deactivate: function () {
     },
