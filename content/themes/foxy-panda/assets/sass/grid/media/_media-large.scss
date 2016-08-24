@@ -14,7 +14,7 @@
 
 // define the media-query
 $media-min-width: 1250px;
-$media-max-width: 5000px;
+$media-max-width: 1800px;
 
 @media screen and (min-width: $media-min-width) and (max-width: $media-max-width) {
     // define the media-specific baseline settings
