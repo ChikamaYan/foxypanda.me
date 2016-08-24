@@ -20,9 +20,9 @@ FoxyPandaApp = App.extend({
     masonryHelper: function(title) {
         var length = title.length;
 
-        if(length < 20) {
+        if(length < 5) {
             return '';
-        } else if(length < 40) {
+        } else if(length < 20) {
             return ' wide';
         } else {
             return ' verywide'
