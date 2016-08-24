@@ -33,7 +33,7 @@ FoxyPandaApp = App.extend({
         }
     },
     foxyExcerptHelper: function (content) {
-        var excerpt = content.toString().match(/<p>.*?<\/p>/i);
+        var excerpt = content.toString().match(/<p>.*?<\/p>/gi);
         if (excerpt.length > 0) {
             return excerpt[0].replace(/<(?:.|\n)*?>/gm, '');
         } else {
