@@ -32,8 +32,13 @@ FoxyPandaApp = App.extend({
             return ' verywide'
         }
     },
-    foxyExcerptHelper: function (excerpt) {
-        return 'HELLO! ' + excerpt;
+    foxyExcerptHelper: function (content) {
+        var excerpt = content.match(/<p>.*?<\/p>/i);
+        if (excerpt.length > 0) {
+            return excerpt[0].replace(/<(?:.|\n)*?>/gm, '');
+        } else {
+            return '';
+        }
     }
 });
 
