@@ -7,6 +7,9 @@
             <div class="foxy-item-inside">
                 <h1 class="foxy-item-title">{{title}}</h1>
                 <!--{{tags prefix=" on "}}-->
+                <p class="foxy-item-excerpt">
+                    {{foxyExcerpt (content words="100")}}
+                </p>
                 <div class="foxy-item-info">
                     <span>Read more ></span>
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>

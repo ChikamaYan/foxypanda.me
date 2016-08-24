@@ -1,12 +1,12 @@
 {
   "name":"foxy-panda-ghost-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "ghost-app": "0.0.3"
   },
   "ghost": {
     "permissions": {
-      "helpers": ["masonry"]
+      "helpers": ["masonry", "foxyExcerpt"]
     }
   }
 }

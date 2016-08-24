@@ -11,22 +11,29 @@ var App = require('ghost-app'),
     FoxyPandaApp;
 
 FoxyPandaApp = App.extend({
-    install: function () {},
-    uninstall: function () {},
+    install: function () {
+    },
+    uninstall: function () {
+    },
     activate: function () {
         this.ghost.helpers.register('masonry', this.masonryHelper);
+        this.ghost.helpers.register('foxyExcerpt', this.foxyExcerptHelper())
     },
-    deactivate: function () {},
-    masonryHelper: function(title) {
+    deactivate: function () {
+    },
+    masonryHelper: function (title) {
         var length = title.length;
 
-        if(length < 5) {
+        if (length < 5) {
             return '';
-        } else if(length < 20) {
+        } else if (length < 20) {
             return ' wide';
         } else {
             return ' verywide'
         }
+    },
+    foxyExcerptHelper: function (excerpt) {
+        return 'HELLO! ' + excerpt;
     }
 });
 
