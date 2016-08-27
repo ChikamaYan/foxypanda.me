@@ -70,6 +70,15 @@
       width: $cell * 3
       display: block
       padding: $cell
+      &-bar
+        $bar-size: round($cell / 6)
+        background-color: $bg-dark
+        margin: $bar-size 0
+        height: $bar-size
+        &:first-child
+          margin-top: $bar-size / 2
+        &:last-child
+          margin-bottom: $bar-size / 2
   &-inside
     overflow-y: visible
     overflow-x: hidden
