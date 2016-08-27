@@ -10,12 +10,10 @@
     <title>{{meta_title}}</title>
     <meta name="description" content="{{meta_description}}"/>
 
-    <script src="https://use.typekit.net/wme5zfx.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300|Quicksand|Yantramanav:300" rel="stylesheet">
 
     <link rel="icon" href="{{asset "img/favicon.png"}}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="{{asset "css/grid/output.css"}}"/>
+    <link href="https://fonts.googleapis.com/css?family=Assistant:200|Rajdhani:300" rel="stylesheet">
     <link rel="stylesheet" href="{{asset "css/style.css"}}"/>
 
     {{ghost_head}}
@@ -24,21 +22,26 @@
 
 <body class="{{body_class}}">
 
+<div class="foxy-navigation-overlay hidden"></div>
+
 {{navigation}}
 
 <div class="foxy-wrapper">
 
-    <div class="foxy-content g-all-c">
+    <div class="foxy-wrapper-inside">
+
+        <div class="foxy-wrapper-menu"><a href="#" class="foxy-wrapper-menu-button">x</a></div>
+
+        <!--<div class="dev-grid"></div>-->
 
         {{{body}}}
 
-    </div><!-- .foxy-content -->
+    </div><!-- .page-wrapper-inside -->
 
-
-</div><!-- .page-wrapper -->
+</div><!-- .foxy-wrapper -->
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-<script src="https://npmcdn.com/masonry-layout@4.1/dist/masonry.pkgd.js"></script>
+<script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.js"></script>
 <script src="{{asset "js/index.js"}}"></script>
 
 {{ghost_foot}}

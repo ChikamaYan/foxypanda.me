@@ -22,20 +22,30 @@ FoxyPandaApp = App.extend({
     deactivate: function () {
     },
     masonryHelper: function (title) {
-        var length = title.length;
+        var length = title.trim().length;
 
-        if (length < 5) {
+        if (length < 150) {
             return '';
-        } else if (length < 20) {
+        } else if (length < 200) {
             return ' wide';
         } else {
-            return ' verywide'
+            return ' very-wide'
         }
     },
     foxyExcerptHelper: function (content) {
         var excerpt = content.toString().match(/<p>.*?<\/p>/gi);
+        var minLength = 20;
+        var maxLength = 60;
+        var multiplier = 0.5;
         if (excerpt) {
-            return excerpt[0].replace(/<(?:.|\n)*?>/gm, '');
+            var stripHtml = excerpt[0].replace(/<(?:.|\n)*?>/gm, '');
+            var words = stripHtml.split(' ');
+            var length = Math.min(maxLength, Math.max(minLength, words.length * multiplier));
+            words = words.slice(0, length);
+            if (words.length === length && !/.*?[?!.]$/i.test(words[words.length - 1])) {
+                words[words.length - 1] = words[words.length - 1].replace(/[,;]$/gi, '') + '...';
+            }
+            return words.join(' ').trim();
         } else {
             return '';
         }

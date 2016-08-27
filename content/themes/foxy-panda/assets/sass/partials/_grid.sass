@@ -1,0 +1,92 @@
+@import "variables"
+@import "mixins"
+@import "compass"
+
+.foxy-grid
+  min-height: 100%
+  &-wrapper
+    max-width: $width-default
+    padding: $cell / 2
+    min-height: 100%
+    margin: auto
+  &-sizer
+    position: absolute
+  &-filter
+    @include transition(all 200ms ease-in-out)
+    box-shadow: inset $bg-light 0 0 0 2px
+    color: $brand-white
+    display: block
+    padding: $cell
+    &.current
+      background-color: $bg-light
+      color: $brand-red
+    &-wrapper
+      display: inline-block
+      padding: $cell / 2
+  &-item
+    text-decoration: none
+    padding: $cell / 2
+    &-inside
+      @include transition(all 200ms ease-in-out)
+      box-shadow: inset $bg-light 0 0 0 2px
+      color: $brand-white
+      overflow: hidden
+      display: block
+      &:hover
+        background-color: $bg-light
+    &-title, &-excerpt, &-info
+      margin: $cell
+    &-excerpt
+      text-align: justify
+
+
+@media screen and (min-width: 0) and (max-width: $width-handheld-portrait - 1px)
+  // Handheld Portrait
+  .foxy-grid
+    &-sizer, &-item-wrapper
+      width: 100%
+    &-item-wrapper
+      &.wide
+        width: 100%
+      &.very-wide
+        width: 100%
+@media screen and (min-width: $width-handheld-portrait) and (max-width: $width-handheld-landscape - 1px)
+  // Handheld Landscape
+  .foxy-grid
+    &-sizer, &-item-wrapper
+      width: 50%
+    &-item-wrapper
+      &.wide
+        width: 100%
+      &.very-wide
+        width: 100%
+@media screen and (min-width: $width-handheld-landscape) and (max-width: $width-tablet-portrait - 1px)
+  // Tablet Portrait
+  .foxy-grid
+    &-sizer, &-item-wrapper
+      width: 100% * 1/3
+    &-item-wrapper
+      &.wide
+        width: 100% * 2/3
+      &.very-wide
+        width: 100% * 3/3
+@media screen and (min-width: $width-tablet-portrait) and (max-width: $width-default - 1px)
+  // Tablet Portrait
+  .foxy-grid
+    &-sizer, &-item-wrapper
+      width: 25%
+    &-item-wrapper
+      &.wide
+        width: 50%
+      &.very-wide
+        width: 75%
+@media screen and (min-width: $width-default)
+  // Tablet Portrait
+  .foxy-grid
+    &-sizer, &-item-wrapper
+      width: 20%
+    &-item-wrapper
+      &.wide
+        width: 40%
+      &.very-wide
+        width: 60%

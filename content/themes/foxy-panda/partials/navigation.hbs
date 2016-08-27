@@ -1,8 +1,8 @@
 <nav class="foxy-navigation" role="navigation">
     <ul>
         {{#foreach navigation}}
-            <li class="foxy-navigation-{{slug}}{{#if current}} foxy-navigation-current{{/if}}" role="presentation">
-                <a href="{{url}}">{{label}}</a>
+            <li class="foxy-navigation-{{slug}}" role="presentation">
+                <a {{#if current}}class="current"{{/if}} href="{{url}}"><h1>{{label}}</h1></a>
             </li><!-- .nav-* -->
         {{/foreach}}
     </ul>

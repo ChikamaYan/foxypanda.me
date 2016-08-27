@@ -1,12 +1,77 @@
 @import "variables"
 @import "mixins"
+@import "compass"
 
-.foxy-wrapper
-  background-color: $wrapper-background
-  padding: $wrapper-padding
-  color: $wrapper-text
+.dev-grid
+  background-image: url('#{$img-path}grid-horizontal.png')
   position: absolute
+  z-index: 999
   height: 100%
   width: 100%
   left: 0
   top: 0
+
+.foxy-navigation
+  @include transform(translateX(-100%))
+  @include transition(all 400ms ease-in-out)
+  @include transition-delay(100ms)
+  position: absolute
+  display: block
+  z-index: 9999
+  left: 0
+  top: 0
+  &.visible
+    @include transform(translateX(0))
+    @include transition-delay(0)
+  &-overlay
+    position: absolute
+    z-index: 9998
+    height: 100%
+    width: 100%
+    left: 0
+    top: 0
+  ul
+    padding: $cell / 2
+    li
+      padding: $cell / 2
+      a
+        @include transition(all 200ms ease-in-out)
+        box-shadow: inset $bg-dark 0 0 0 2px
+        background-color: $bg-light
+        color: $brand-white
+        display: block
+        padding: $cell
+        &.current
+          background-color: $bg-dark
+          color: $brand-red
+
+.foxy-wrapper
+  @include transition(all 400ms ease-in-out)
+  background-color: $bg-dark
+  color: $brand-white
+  position: absolute
+  overflow-y: scroll
+  height: 100%
+  width: 100%
+  left: 0
+  top: 0
+  &.minimised
+    @include transform(rotateY(-15deg) translateZ(-250px))
+    @include transform-origin(right, center)
+  &-menu
+    position: absolute
+    padding: $cell
+    left: 0
+    top: 0
+    &-button
+      background-color: $brand-blue
+      text-align: center
+      height: $cell * 3
+      width: $cell * 3
+      display: block
+      padding: $cell
+  &-inside
+    overflow-y: visible
+    overflow-x: hidden
+    min-height: 100%
+

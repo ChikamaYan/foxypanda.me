@@ -1,32 +1,39 @@
 @import "variables"
 @import "mixins"
+@import "compass"
 
 *
-  vertical-align: baseline
   box-sizing: border-box
+  position: relative
   padding: 0
   margin: 0
 
 html, body
-  line-height: $line-height
-  font-size: 100%
+  font-size: $cell * 0.7
+  line-height: $cell
+  overflow: hidden
   height: 100%
   width: 100%
 
 body
-  background-color: $background
-  @include image($texture)
-  font-family: $font
+  background-color: $bg-light
+  font-family: $font-family
+  color: $brand-white
+  perspective: 100vh
   position: relative
-  color: $text
   margin: 0
+
+a
+  text-decoration: none
 
 h1, h2, h3, h4, h5, h6
   font-family: $headings-font
-  font-weight: normal
+  text-transform: uppercase
+  font-size: $cell * 0.8
+  font-weight: bold
 
-h1
-  line-height: $line-height * 2
+.hidden
+  display: none !important
 
 .clear-fix
   clear: both
