@@ -62,7 +62,7 @@
       display: inline-block
       padding: 0 $cell / 2
       color: $brand-white
-      font-weight: bold
+      font-weight: 600
       height: $cell
     &:before, &:after
       border: solid 2px $bg-light
@@ -133,6 +133,15 @@
       border-left: solid 5px $brand-blue
       background-color: $bg-light
       padding: $cell
+    .MathJax_SVG
+      margin: 0 $cell / 4
+    *:not(pre) > code
+      background-color: $bg-light
+      font-size: $cell * 0.65
+      margin: 0 $cell / 4
+      padding: $cell / 4
+      color: $brand-blue
+      border-radius: 0
     pre[class*="language-"]
       padding: $cell $cell $cell $cell * 3.5
       border: solid 2px $brand-blue
@@ -145,7 +154,7 @@
     .prism-show-language > .prism-show-language-label
       background-color: $brand-blue
       line-height: $cell
-      font-weight: bold
+      font-weight: 500
       border-radius: 0
       height: $cell
     .video
