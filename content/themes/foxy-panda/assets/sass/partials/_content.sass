@@ -169,16 +169,18 @@
       color: $brand-blue
       border-radius: 0
     pre[class*="language-"]
-      padding: $cell $cell $cell $cell * 3.5
       border: solid 2px $brand-blue
       background-color: $bg-light
       border-radius: 0
+      padding: $cell
       @media #{$handheld-portrait}
         &, & code, & *
           font-size: $cell * 0.6
       @media #{$handheld-landscape}
         &, & code, & *
           font-size: $cell * 0.6
+      &.line-numbers
+        padding: $cell $cell $cell $cell * 3.5
       .line-numbers-rows
         width: $cell * 2.5
         left: -$cell * 3.5
