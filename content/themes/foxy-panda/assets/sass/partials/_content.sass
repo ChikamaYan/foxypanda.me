@@ -109,10 +109,9 @@
       &-name, &-bio
         padding: $cell / 2
         a
-          border-bottom: solid 1px $brand-blue
           color: $brand-blue
           &:hover
-            border-bottom: solid 1px transparent
+            text-decoration: underline
   &-content
     font-size: $cell * 0.8
     padding: $cell / 2
@@ -174,9 +173,11 @@
       background-color: $bg-light
       border-radius: 0
       @media #{$handheld-portrait}
-        font-size: $cell * 0.6
+        &, & *
+          font-size: $cell * 0.6
       @media #{$handheld-landscape}
-        font-size: $cell * 0.6
+        &, & *
+          font-size: $cell * 0.6
       .line-numbers-rows
         width: $cell * 2.5
         left: -$cell * 3.5
