@@ -64,4 +64,16 @@ $window.on('load', function () {
 
     }
 
+    var $postContentLinks = $('.foxy-post-content').find('a');
+    $.each($postContentLinks, function (index, link) {
+        var $link = $(link);
+        var text = $link.text();
+        if (/^~/.test(text)) {
+            $link.text(text.substr(1));
+        } else {
+            $(link).attr('target', '_blank');
+        }
+    });
+
+
 });
