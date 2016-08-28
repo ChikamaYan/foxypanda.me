@@ -1,0 +1,152 @@
+@import "variables"
+@import "mixins"
+@import "compass"
+
+.foxy-content
+  max-width: $width-default
+  padding: $cell / 2
+  min-height: 100%
+  overflow: hidden
+  margin: auto
+  &-bar
+    &-block
+      display: inline-block
+      padding: $cell / 2
+
+  h1, h2, h3, h4, h5, h6
+    font-family: $headings-font
+    text-transform: uppercase
+    font-size: $cell * 1.0
+    font-weight: bold
+
+.foxy-block
+  box-shadow: inset $bg-light 0 0 0 2px
+  color: $brand-white
+  display: block
+  padding: $cell
+
+.foxy-btn
+  @include transition(all 200ms ease-in-out)
+  @extend .foxy-block
+  &:hover
+    background-color: $bg-light
+  &.current
+    background-color: $bg-light
+    color: $brand-red
+
+.foxy-post
+  &-title
+    padding: $cell
+    &:before, &:after
+      color: $brand-blue
+    &:before
+      content: '[ '
+    &:after
+      content: ' ]'
+  &-date
+    text-align: center
+    margin: $cell / 2
+    height: $cell
+    hr
+      background-color: $bg-light
+      position: absolute
+      margin-top: -1px
+      border: none
+      height: 2px
+      width: 100%
+      top: 50%
+    time
+      background-color: $bg-light
+      display: inline-block
+      padding: 0 $cell / 2
+      color: $brand-white
+      font-weight: bold
+      height: $cell
+    &:before, &:after
+      border: solid 2px $bg-light
+      box-sizing: border-box
+      position: absolute
+      width: $cell / 2
+      display: block
+      height: $cell
+      content: ''
+      top: 0
+    &:before
+      border-right: none
+      left: 0
+    &:after
+      border-left: none
+      right: 0
+  &-author
+    border-top: solid 5px $brand-blue
+    background-color: $bg-light
+    padding: $cell / 2
+    margin: $cell / 2
+    &-image
+      margin: $cell / 2 $cell $cell / 2 $cell / 2
+      background-size: cover
+      border-radius: 5px
+      height: $cell * 6
+      width: $cell * 6
+      float: left
+    &-info
+      &-name, &-bio
+        padding: $cell / 2
+        a
+          border-bottom: solid 1px $brand-blue
+          color: $brand-blue
+          &:hover
+            border-bottom: solid 1px transparent
+  &-content
+    font-size: $cell * 0.8
+    padding: $cell / 2
+    & > *, & > pre
+      margin-bottom: $cell
+    & > *
+      & + h1
+        padding-top: $cell * 2
+      & + h2, & + h3, & + h4, & + h5, & + h6
+        padding-top: $cell
+    h1, h2
+      &:before
+        color: $brand-blue
+        content: '> '
+    h1
+      line-height: $cell * 1.5
+      font-size: $cell * 1.3
+    p
+      line-height: $cell * 1.25
+      letter-spacing: 1px
+      text-align: justify
+    a
+      border-bottom: solid 1px $brand-blue
+      color: $brand-blue
+      &:hover
+        border-bottom: solid 1px transparent
+    ul, ol
+      padding-left: $cell
+    blockquote
+      border-left: solid 5px $brand-blue
+      background-color: $bg-light
+      padding: $cell
+    pre[class*="language-"]
+      border: solid 2px $brand-blue
+      background-color: $bg-light
+      border-radius: 0
+      padding: $cell
+    .prism-show-language > .prism-show-language-label
+      background-color: $brand-blue
+      line-height: $cell
+      font-weight: bold
+      border-radius: 0
+      height: $cell
+    hr
+      background-color: $brand-blue
+      margin: $cell * 3 0
+      border: none
+      height: 2px
+    img
+      border-radius: 5px
+      text-align: center
+      max-width: 100%
+      margin: 0 auto

@@ -4,36 +4,16 @@
 
 .foxy-grid
   min-height: 100%
-  &-wrapper
-    max-width: $width-default
-    padding: $cell / 2
-    min-height: 100%
-    margin: auto
+  &-filter
+    font-weight: bold
   &-sizer
     position: absolute
-  &-filter
-    @include transition(all 200ms ease-in-out)
-    box-shadow: inset $bg-light 0 0 0 2px
-    color: $brand-white
-    display: block
-    padding: $cell
-    &.current
-      background-color: $bg-light
-      color: $brand-red
-    &-wrapper
-      display: inline-block
-      padding: $cell / 2
   &-item
     text-decoration: none
     padding: $cell / 2
     &-inside
-      @include transition(all 200ms ease-in-out)
-      box-shadow: inset $bg-light 0 0 0 2px
-      color: $brand-white
       overflow: hidden
-      display: block
-      &:hover
-        background-color: $bg-light
+      padding: 0
     &-title, &-excerpt, &-info
       margin: $cell
     &-excerpt

@@ -1,40 +1,31 @@
 {{!< default}}
 
-<div class="foxy-grid-wrapper">
-    <div class="foxy-grid-filter-wrapper foxy-grid-menu-button hidden">
-        {{> button}}
-    </div><!-- .foxy-grid-filter-wrapper -->
-    <div class="foxy-grid-filter-wrapper">
-        <a href="#" class="foxy-grid-filter current" data-filter="*">
-            <h1>All</h1>
-        </a><!-- .foxy-grid-filter current -->
-    </div><!-- .foxy-grid-filter-wrapper -->
-    <div class="foxy-grid-filter-wrapper">
-        <a href="#" class="foxy-grid-filter" data-filter=".tag-projects">
-            <h1>Projects</h1>
-        </a><!-- .foxy-grid-filter current -->
-    </div><!-- .foxy-grid-filter-wrapper -->
-    <div class="foxy-grid-filter-wrapper">
-        <a href="#" class="foxy-grid-filter" data-filter=".tag-posts-tag">
-            <h1>Posts</h1>
-        </a><!-- .foxy-grid-filter current -->
-    </div><!-- .foxy-grid-filter-wrapper -->
-    <div id="foxy-grid" class="foxy-grid">
-        <div class="foxy-grid-sizer">&nbsp;</div>
-        {{#foreach posts}}
-            <div class="foxy-grid-item-wrapper {{post_class}}{{masonry (foxyExcerpt (content words="100"))}}">
-                <div class="foxy-grid-item">
-                    <a class="foxy-grid-item-inside" href="{{url}}">
-                        <h1 class="foxy-grid-item-title">{{title}}</h1>
-                        <p class="foxy-grid-item-excerpt">
-                            {{{foxyExcerpt (content words="100")}}}
-                        </p>
-                        <div class="foxy-grid-item-info">
-                            <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
-                        </div><!-- .foxy-grid-item-info -->
-                    </a><!-- .foxy-grid-item-inside -->
-                </div><!-- .foxy-grid-item -->
-            </div><!-- .foxy-grid-item-wrapper -->
-        {{/foreach}}
-    </div><!-- .foxy-grid -->
-</div><!-- .foxy-grid-wrapper -->
+
+<div class="foxy-content-bar-block foxy-content-menu-button hidden">{{> button}}</div>
+<div class="foxy-content-bar-block">
+    <a href="#" class="foxy-grid-filter foxy-btn current" data-filter="*">All</a>
+</div><!-- .foxy-grid-filter-wrapper -->
+<div class="foxy-content-bar-block">
+    <a href="#" class="foxy-grid-filter foxy-btn" data-filter=".tag-projects">Projects</a>
+</div><!-- .foxy-grid-filter-wrapper -->
+<div class="foxy-content-bar-block">
+    <a href="#" class="foxy-grid-filter foxy-btn" data-filter=".tag-posts-tag">Posts</a>
+</div><!-- .foxy-grid-filter-wrapper -->
+<div id="foxy-grid" class="foxy-grid">
+    <div class="foxy-grid-sizer">&nbsp;</div>
+    {{#foreach posts}}
+        <div class="foxy-grid-item-wrapper {{post_class}}{{masonry (foxyExcerpt (content words="100"))}}">
+            <div class="foxy-grid-item">
+                <a class="foxy-grid-item-inside foxy-btn" href="{{url}}">
+                    <h1 class="foxy-grid-item-title">{{title}}</h1>
+                    <p class="foxy-grid-item-excerpt">
+                        {{{foxyExcerpt (content words="100")}}}
+                    </p>
+                    <div class="foxy-grid-item-info">
+                        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+                    </div><!-- .foxy-grid-item-info -->
+                </a><!-- .foxy-grid-item-inside -->
+            </div><!-- .foxy-grid-item -->
+        </div><!-- .foxy-grid-item-wrapper -->
+    {{/foreach}}
+</div><!-- .foxy-grid -->

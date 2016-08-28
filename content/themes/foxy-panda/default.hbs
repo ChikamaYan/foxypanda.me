@@ -14,6 +14,7 @@
 
     <link rel="icon" href="{{asset "img/favicon.png"}}">
     <link href="https://fonts.googleapis.com/css?family=Assistant:200|Rajdhani:300" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset "js/prism/prism.css"}}"/>
     <link rel="stylesheet" href="{{asset "css/style.css"}}"/>
 
     {{ghost_head}}
@@ -34,7 +35,11 @@
 
         <!--<div class="dev-grid"></div>-->
 
-        {{{body}}}
+        <div class="foxy-content">
+
+            {{{body}}}
+
+        </div><!-- .foxy-content -->
 
     </div><!-- .page-wrapper-inside -->
 
@@ -42,6 +47,7 @@
 
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.js"></script>
+<script src="{{asset "js/prism/prism.js"}}"></script>
 <script src="{{asset "js/index.js"}}"></script>
 
 {{ghost_foot}}
