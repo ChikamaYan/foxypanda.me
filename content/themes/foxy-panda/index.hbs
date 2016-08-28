@@ -15,7 +15,7 @@
     <div class="foxy-grid-sizer">&nbsp;</div>
     {{#foreach posts}}
         <div class="foxy-grid-item-wrapper {{post_class}}{{masonry (foxyExcerpt (content words="100"))}}">
-            <div class="foxy-grid-item">
+            <div class="foxy-grid-item {{post_class}}">
                 <a class="foxy-grid-item-inside foxy-btn" href="{{url}}">
                     <h1 class="foxy-grid-item-title">{{title}}</h1>
                     <p class="foxy-grid-item-excerpt">

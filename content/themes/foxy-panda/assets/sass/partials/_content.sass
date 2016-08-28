@@ -18,6 +18,8 @@
     text-transform: uppercase
     font-size: $cell * 1.0
     font-weight: bold
+  p
+    font-weight: 200
 
 .foxy-block
   box-shadow: inset $bg-light 0 0 0 2px
@@ -117,6 +119,7 @@
     p
       line-height: $cell * 1.25
       letter-spacing: 1px
+      font-weight: 500
       text-align: justify
     a
       border-bottom: solid 1px $brand-blue
@@ -130,10 +133,14 @@
       background-color: $bg-light
       padding: $cell
     pre[class*="language-"]
+      padding: $cell $cell $cell $cell * 3.5
       border: solid 2px $brand-blue
       background-color: $bg-light
       border-radius: 0
-      padding: $cell
+      .line-numbers-rows
+        width: $cell * 2.5
+        left: -$cell * 3.5
+
     .prism-show-language > .prism-show-language-label
       background-color: $brand-blue
       line-height: $cell

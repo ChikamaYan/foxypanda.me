@@ -11,9 +11,24 @@
   &-item
     text-decoration: none
     padding: $cell / 2
+    &.tag-projects &-inside
+      &:before
+        background-color: $brand-red
+    &.tag-blog &-inside
+      &:before
+        background-color: $brand-blue
     &-inside
       overflow: hidden
       padding: 0
+      &:before
+        @include transform(rotate(45deg))
+        right: -$cell * 1.25
+        position: absolute
+        top: -$cell * 1.25
+        height: $cell * 2
+        width: $cell * 2
+        display: block
+        content: ''
     &-title, &-excerpt, &-info
       margin: $cell
     &-excerpt
