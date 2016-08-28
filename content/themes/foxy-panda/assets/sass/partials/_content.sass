@@ -19,6 +19,8 @@
     text-transform: uppercase
     font-size: $cell * 1.0
     font-weight: 500
+    .code
+      text-transform: none
   p
     font-weight: 200
 
@@ -171,7 +173,7 @@
     pre[class*="language-"]
       border: solid 2px $brand-blue
       background-color: $bg-light
-      padding: $cell $cell * 3
+      padding: $cell $cell * 2
       border-radius: 0
       @media #{$handheld-portrait}
         &, & code, & *
