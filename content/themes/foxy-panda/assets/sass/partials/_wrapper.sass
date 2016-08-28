@@ -12,17 +12,18 @@
   top: 0
 
 .foxy-navigation
-  @include transform(translateX(-100%))
   @include transition(all 400ms ease-in-out)
-  @include transition-delay(100ms)
+  @include transform(translateX(-100%))
+  border-right: solid 5px $brand-blue
+  background-color: $bg-light
   position: absolute
   display: block
   z-index: 9999
+  height: 100%
   left: 0
   top: 0
   &.visible
     @include transform(translateX(0))
-    @include transition-delay(0)
   &-overlay
     position: absolute
     display: block
@@ -37,17 +38,11 @@
       padding: $cell / 2
       a
         @include transition(all 200ms ease-in-out)
-        box-shadow: inset $bg-dark 0 0 0 2px
-        background-color: $bg-light
-        color: $brand-white
-        display: block
-        padding: $cell
-        &.current
-          background-color: $bg-dark
-          color: $brand-red
+        padding: $cell $cell * 2 !important
+        font-size: $cell * 0.55 !important
+        @extend .foxy-btn-inverted
 
 .foxy-wrapper
-  @include transition(all 400ms ease-in-out)
   background-color: $bg-dark
   color: $brand-white
   position: absolute
@@ -56,9 +51,6 @@
   width: 100%
   left: 0
   top: 0
-  &.minimised
-    @include transform(rotateY(-15deg) translateZ(-250px))
-    @include transform-origin(right, center)
   &-menu
     position: absolute
     padding: $cell

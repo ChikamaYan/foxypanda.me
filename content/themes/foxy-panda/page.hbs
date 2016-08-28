@@ -1,1 +1,35 @@
 {{!< default}}
+
+{{#post}}
+
+    <div class="foxy-post {{post_class}}">
+
+        <div class="foxy-content-bar-block foxy-content-menu-button hidden">{{> button}}</div><!--
+ --><div class="foxy-content-bar-block"><a href="/" class="foxy-btn">Back to Index</a></div><!--
+ --><div class="foxy-content-bar-block"><h1 class="foxy-post-title">{{title}}</h1></div>
+
+        <div class="foxy-post-date">
+            <hr>
+            <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+        </div><!-- .foxy-post-date -->
+
+        <div class="foxy-post-content">
+
+            {{content}}
+
+        </div><!-- .foxy-post-content -->
+
+        <div class="foxy-post-author">
+            {{#author}}
+                <div class="foxy-post-author-image" style="background-image: url({{image}})"></div>
+                <div class="foxy-post-author-info">
+                    <h1 class="foxy-post-author-info-name">{{name}}</h1>
+                    <p class="foxy-post-author-info-bio">{{{bio}}}</p>
+                </div><!-- .foxy-post-author-info -->
+                <div class="clear-fix"></div>
+            {{/author}}
+        </div><!-- .foxy-post-author -->
+
+    </div><!-- .foxy-post -->
+
+{{/post}}

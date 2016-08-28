@@ -31,11 +31,20 @@
 .foxy-btn
   @include transition(all 200ms ease-in-out)
   @extend .foxy-block
-  &:hover
+  &:hover, &.current
     background-color: $bg-light
   &.current
-    background-color: $bg-light
     color: $brand-red
+
+.foxy-btn-inverted
+  box-shadow: inset $bg-dark 0 0 0 2px
+  @extend .foxy-btn
+  &:hover, &.current
+    background-color: $bg-dark
+  &.current
+    color: $brand-blue
+
+
 
 .foxy-post
   &-title
@@ -127,10 +136,9 @@
       text-indent: $cell
       font-weight: 500
     a
-      border-bottom: solid 1px $brand-blue
       color: $brand-blue
       &:hover
-        border-bottom: solid 1px transparent
+        text-decoration: underline
     ul, ol
       padding-left: $cell
     blockquote
