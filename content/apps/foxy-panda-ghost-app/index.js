@@ -40,7 +40,7 @@ FoxyPandaApp = App.extend({
         if (excerpt) {
             var stripHtml = excerpt[0].replace(/<(?:.|\n)*?>/gm, '');
             var words = stripHtml.split(' ');
-            var length = Math.min(maxLength, Math.max(minLength, words.length * multiplier));
+            var length = Math.min(maxLength, Math.max(minLength, Math.round(words.length * multiplier)));
             words = words.slice(0, length);
             if (words.length === length && !/.*?[?!.]$/i.test(words[words.length - 1])) {
                 words[words.length - 1] = words[words.length - 1].replace(/[,;]$/gi, '') + '...';
