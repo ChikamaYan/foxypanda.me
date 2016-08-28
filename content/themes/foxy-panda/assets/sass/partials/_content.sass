@@ -101,6 +101,9 @@
       border-radius: 5px
       height: $cell * 6
       width: $cell * 6
+      @media #{$handheld-portrait}
+        height: $cell * 3
+        width: $cell * 3
       float: left
     &-info
       &-name, &-bio
@@ -131,6 +134,8 @@
       line-height: $cell * 1.5
       font-size: $cell * 1.3
     p
+      @media #{$handheld-portrait}
+        font-size: $cell * 0.75
       line-height: $cell * 1.4
       letter-spacing: 1px
       text-align: justify

@@ -9,6 +9,13 @@ $width-handheld-landscape: $cell * 32
 $width-tablet-portrait: $cell * 41
 $width-default: $cell * 47
 
+// Media queries
+$handheld-portrait: "screen and (min-width: 0) and (max-width: #{$width-handheld-portrait - 1px})"
+$handheld-landscape: "screen and (min-width: #{$width-handheld-portrait}) and (max-width: #{$width-handheld-landscape - 1px})"
+$tablet-portrait: "screen and (min-width:  #{$width-handheld-landscape}) and (max-width:  #{$width-tablet-portrait - 1px})"
+$default: "screen and (min-width: #{$width-tablet-portrait}) and (max-width: #{$width-default - 1px})"
+$large: "screen and (min-width: #{$width-default})"
+
 // Colors
 $brand-red: #ff7959
 $brand-blue: #25d7e5

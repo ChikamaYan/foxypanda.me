@@ -34,7 +34,7 @@
       text-align: justify
 
 
-@media screen and (min-width: 0) and (max-width: $width-handheld-portrait - 1px)
+@media #{$handheld-portrait}
   // Handheld Portrait
   .foxy-grid
     &-sizer, &-item-wrapper
@@ -44,7 +44,7 @@
         width: 100%
       &.very-wide
         width: 100%
-@media screen and (min-width: $width-handheld-portrait) and (max-width: $width-handheld-landscape - 1px)
+@media #{$handheld-landscape}
   // Handheld Landscape
   .foxy-grid
     &-sizer, &-item-wrapper
@@ -54,7 +54,7 @@
         width: 100%
       &.very-wide
         width: 100%
-@media screen and (min-width: $width-handheld-landscape) and (max-width: $width-tablet-portrait - 1px)
+@media #{$tablet-portrait}
   // Tablet Portrait
   .foxy-grid
     &-sizer, &-item-wrapper
@@ -64,8 +64,8 @@
         width: 100% * 2/3
       &.very-wide
         width: 100% * 3/3
-@media screen and (min-width: $width-tablet-portrait) and (max-width: $width-default - 1px)
-  // Tablet Portrait
+@media #{$default}
+  // Default
   .foxy-grid
     &-sizer, &-item-wrapper
       width: 25%
@@ -74,8 +74,8 @@
         width: 50%
       &.very-wide
         width: 75%
-@media screen and (min-width: $width-default)
-  // Tablet Portrait
+@media #{$large}
+  // Large
   .foxy-grid
     &-sizer, &-item-wrapper
       width: 20%
