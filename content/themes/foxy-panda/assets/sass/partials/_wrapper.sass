@@ -16,7 +16,7 @@
   @include transform(translateX(-100%))
   border-right: solid 5px $brand-blue
   background-color: $bg-light
-  position: absolute
+  position: fixed !important
   display: block
   z-index: 9999
   height: 100%
@@ -38,19 +38,19 @@
       padding: $cell / 2
       a
         @include transition(all 200ms ease-in-out)
-        padding: $cell $cell * 2 !important
+        padding: $cell $cell * 3 !important
         font-size: $cell * 0.55 !important
         @extend .foxy-btn-inverted
 
 .foxy-wrapper
-  background-color: $bg-dark
-  color: $brand-white
-  position: absolute
-  overflow-y: scroll
-  height: 100%
-  width: 100%
-  left: 0
-  top: 0
+  min-height: 100%
+  &.absolute
+    //position: absolute
+    //overflow-y: scroll
+    //height: 100%
+    //width: 100%
+    //left: 0
+    //top: 0
   &-menu
     position: absolute
     padding: $cell
@@ -73,7 +73,6 @@
         &:last-child
           margin-bottom: $bar-size / 2
   &-inside
-    overflow-y: visible
-    overflow-x: hidden
-    min-height: 100%
+    //overflow-y: visible
+    //overflow-x: hidden
 

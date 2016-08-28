@@ -12,15 +12,14 @@
 html, body
   font-size: $cell * 0.75
   line-height: $cell
-  overflow: hidden
-  height: 100%
-  width: 100%
+  &.no-overflow
+    overflow: hidden
 
 body
-  background-color: $bg-light
+  background-color: $bg-dark
   font-family: $font-family
   color: $brand-white
-  perspective: 100vh
+  overflow-y: scroll
   position: relative
   margin: 0
 
