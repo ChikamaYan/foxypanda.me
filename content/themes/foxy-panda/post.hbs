@@ -10,7 +10,7 @@
 
     <div class="foxy-post-date">
         <hr>
-        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
     </div><!-- .foxy-post-date -->
 
     <div class="foxy-post-content">
@@ -29,6 +29,8 @@
             <div class="clear-fix"></div>
         {{/author}}
     </div><!-- .foxy-post-author -->
+
+    {{> comments}}
 
 </div><!-- .foxy-post -->
 
