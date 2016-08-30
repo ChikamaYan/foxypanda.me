@@ -19,7 +19,6 @@ $window.on('load', function () {
 
     // Load the scripts and execute functions
     // defined in the post body
-
     var loadScripts = function(array, accumulator) {
         if (!accumulator) {
             accumulator = 0;

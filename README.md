@@ -49,3 +49,15 @@ Links that open in a new window or the same window. Note that the tilde characte
 
 [~Same Window](#)
 ```
+
+### Embedding JavaScript into pages
+
+Ghost's Markdown engine supports HTML, so JS can be embedded directly into pages. If you for some reason need jQuery or want the scripts to be loaded after the rest of Foxy Panda JS, use the mechanism before:
+
+```javascript
+window.scripts.push('/path/to/some/script'); // This script will load first
+window.scripts.push('/path/to/another/script'); // Will load second
+window.scripts.push(function() {
+    console.log('Hello World');
+}); // Will get executed after the above 2 scripts are loaded
+```
