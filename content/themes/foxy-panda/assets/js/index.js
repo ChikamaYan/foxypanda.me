@@ -19,20 +19,23 @@ $window.on('load', function () {
 
     // Load the scripts and execute functions
     // defined in the post body
-    var loadScripts = function(array, accumulator) {
+    var loadScripts = function (array, accumulator) {
         if (!accumulator) {
             accumulator = 0;
-        } else if(accumulator == array.length) {
+        }
+        if (accumulator == array.length) {
             return;
         }
         var script = array[accumulator];
-        if(typeof script  === 'function') {
+        if (typeof script === 'function') {
             script($);
             loadScripts(array, ++accumulator);
-        } else {
-            $.getScript(script, function() {
+        } else if (typeof script === 'string') {
+            $.getScript(script, function () {
                 loadScripts(array, ++accumulator);
             })
+        } else {
+            throw new Error('Invalid script.');
         }
     };
     loadScripts(window.scripts);
