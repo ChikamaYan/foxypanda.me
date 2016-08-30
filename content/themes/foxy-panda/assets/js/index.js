@@ -17,6 +17,27 @@ $window = $(window);
 
 $window.on('load', function () {
 
+    // Load the scripts and execute functions
+    // defined in the post body
+
+    var loadScripts = function(array, accumulator) {
+        if (!accumulator) {
+            accumulator = 0;
+        } else if(accumulator == array.length) {
+            return;
+        }
+        var script = array[accumulator];
+        if(typeof script  === 'function') {
+            script($);
+            loadScripts(array, ++accumulator);
+        } else {
+            $.getScript(script, function() {
+                loadScripts(array, ++accumulator);
+            })
+        }
+    };
+    loadScripts(window.scripts);
+
     var $body = $('body');
     var $wrapper = $('.foxy-wrapper');
     var $navigation = $('.foxy-navigation');
