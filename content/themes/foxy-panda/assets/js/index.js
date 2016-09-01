@@ -87,6 +87,8 @@ $window.on('load', function () {
 
     }
 
+    // Make all links open in new windows,
+    // except those prefixed with ~
     var $postContentLinks = $('.foxy-post-content').find('a');
     $.each($postContentLinks, function (index, link) {
         var $link = $(link);
