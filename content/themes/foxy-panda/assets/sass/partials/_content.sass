@@ -92,6 +92,15 @@
     &:after
       border-left: none
       right: 0
+  &-like
+    background-color: $bg-light
+    text-align: center
+    padding: $cell / 4
+    margin: $cell / 2
+    .fb-like
+      margin-left: $cell / 2
+      position: relative
+      line-height: 120%
   &-author
     border-top: solid 5px $brand-blue
     background-color: $bg-light
@@ -114,6 +123,8 @@
           color: $brand-blue
           &:hover
             text-decoration: underline
+      &-bio
+        font-weight: 500 !important
   &-content
     font-size: $cell * 0.8
     padding: $cell / 2
