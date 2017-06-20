@@ -1,7 +1,5 @@
 // Ghost Configuration for Heroku
 
-require('./helpers')();
-
 var path = require('path'),
     config,
     fileStorage,
