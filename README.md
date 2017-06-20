@@ -4,7 +4,7 @@ FoxyPanda is a personal blog based on [Ghost](https://ghost.org/) and is deploye
 
 # Notes for myself
 
-These are just notes about the changes I made to the standard Ghost functionality.
+These are just notes about the changes I made to the standard Ghost functionality. For reference, `helpers.js` contains all of the custom Handlebars helpers I have defined.
 
 ### Compiling Sass
 
