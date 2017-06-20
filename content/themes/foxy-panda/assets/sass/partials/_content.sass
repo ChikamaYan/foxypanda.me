@@ -21,8 +21,24 @@
     font-weight: 500
     code
       text-transform: none
+
+.foxy-introduction
+  border-left: solid 5px $brand-blue
+  background-color: $bg-light
+  margin: $cell / 2
+  padding: $cell
+  h1
+    margin-bottom: $cell / 2
+    line-height: $cell * 1.4
+    font-size: $cell * 1.2
+    text-transform: none
   p
-    font-weight: 200
+    line-height: $cell * 1.2
+    font-size: $cell * 0.8
+  a
+    color: $brand-blue
+    &:hover
+      text-decoration: underline
 
 .foxy-block
   box-shadow: inset $bg-light 0 0 0 2px
@@ -163,6 +179,14 @@
         letter-spacing: 0
     a
       color: $brand-blue
+      &[target="_blank"]:after
+        background: url('#{$img-path}external-link.svg') no-repeat center
+        background-size: contain
+        margin: 0 0.1em 0 0.2em
+        display: inline-block
+        height: 0.6em
+        width: 0.6em
+        content: ''
       &:hover
         text-decoration: underline
     ul, ol
@@ -207,7 +231,6 @@
     .prism-show-language > .prism-show-language-label
       background-color: $brand-blue
       line-height: $cell
-      font-weight: 500
       border-radius: 0
       height: $cell
     .video
