@@ -21,8 +21,24 @@
     font-weight: 500
     code
       text-transform: none
+
+.foxy-introduction
+  border-left: solid 5px $brand-blue
+  background-color: $bg-light
+  margin: $cell / 2
+  padding: $cell
+  h1
+    margin-bottom: $cell / 2
+    line-height: $cell * 1.4
+    font-size: $cell * 1.2
+    text-transform: none
   p
-    font-weight: 200
+    line-height: $cell * 1.2
+    font-size: $cell * 0.8
+  a
+    color: $brand-blue
+    &:hover
+      text-decoration: underline
 
 .foxy-block
   box-shadow: inset $bg-light 0 0 0 2px
@@ -92,6 +108,15 @@
     &:after
       border-left: none
       right: 0
+  &-like
+    background-color: $bg-light
+    text-align: center
+    padding: $cell / 4
+    margin: $cell / 2
+    .fb-like
+      margin-left: $cell / 2
+      position: relative
+      line-height: 120%
   &-author
     border-top: solid 5px $brand-blue
     background-color: $bg-light
@@ -114,6 +139,8 @@
           color: $brand-blue
           &:hover
             text-decoration: underline
+      &-bio
+        font-weight: 500 !important
   &-content
     font-size: $cell * 0.8
     padding: $cell / 2
@@ -125,7 +152,7 @@
       & + h2, & + h3, & + h4, & + h5, & + h6
         padding-top: $cell
     h1, h2
-      &:before
+      &:not(.anchor):before
         color: $brand-blue
         content: '# '
     h2
@@ -152,11 +179,21 @@
         letter-spacing: 0
     a
       color: $brand-blue
+      &[target="_blank"]:after
+        background: url('#{$img-path}external-link.svg') no-repeat center
+        background-size: contain
+        margin: 0 0.1em 0 0.25em
+        display: inline-block
+        height: 0.65em
+        width: 0.65em
+        content: ''
       &:hover
         text-decoration: underline
     ul, ol
       line-height: $cell * 1.4
       padding-left: $cell * 2
+      ul, ol
+        margin-top: $cell
     blockquote
       border-left: solid 5px $brand-blue
       background-color: $bg-light
@@ -177,6 +214,8 @@
       background-color: $bg-light
       padding: $cell $cell * 2
       border-radius: 0
+      &, & code, & *
+        font-size: $cell * 0.7
       @media #{$handheld-portrait}
         &, & code, & *
           font-size: $cell * 0.6
@@ -192,7 +231,6 @@
     .prism-show-language > .prism-show-language-label
       background-color: $brand-blue
       line-height: $cell
-      font-weight: 500
       border-radius: 0
       height: $cell
     .video
@@ -256,7 +294,7 @@
       border-left: none
       right: 0
   background-color: $bg-light
-  padding: $cell / 2 $cell
+  padding: $cell / 3 $cell / 2
   margin: $cell / 2
   #disqus_thread
     a

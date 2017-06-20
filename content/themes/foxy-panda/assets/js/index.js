@@ -23,7 +23,7 @@ $window.on('load', function () {
         if (!accumulator) {
             accumulator = 0;
         }
-        if (accumulator == array.length) {
+        if (accumulator === array.length) {
             return;
         }
         var script = array[accumulator];
@@ -87,18 +87,30 @@ $window.on('load', function () {
 
     }
 
-    // Make all links open in new windows,
-    // except those prefixed with ~
-    var $postContentLinks = $('.foxy-post-content').find('a');
-    $.each($postContentLinks, function (index, link) {
-        var $link = $(link);
-        var text = $link.text();
-        if (/^~/.test(text)) {
-            $link.text(text.substr(1));
-        } else {
-            $(link).attr('target', '_blank');
-        }
-    });
+    console.log('ERqweqwe');
+    if ($body.hasClass('post-template')) {
+        var $content = $('.foxy-post-content');
 
+        // Make all links open in new windows,
+        // except those prefixed with ~
+        var $postContentLinks = $content.find('a');
+        $.each($postContentLinks, function (index, link) {
+            var $link = $(link);
+            var text = $link.text();
+            if (/^~/.test(text)) {
+                $link.text(text.substr(1));
+            } else {
+                $(link).attr('target', '_blank');
+            }
+        });
+
+        var $headings = $content.find('h1, h2');
+        $.each($headings, function(index, heading) {
+            var $heading = $(heading);
+            var id = $heading.attr('id');
+            $heading.addClass('anchor');
+            $heading.prepend('<a class="foxy-anchor" href="#' + id + '">#</a> ');
+        });
+    }
 
 });
