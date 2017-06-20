@@ -6,6 +6,10 @@ FoxyPanda is a personal blog based on [Ghost](https://ghost.org/) and is deploye
 
 These are just notes about the changes I made to the standard Ghost functionality.
 
+### Compiling Sass
+
+All Sass files can be compiled by simply running `compass watch` in the root directory. `config.rb` contains all of necessary Compass configuration.`
+
 ### Syntax highlighting and LaTeX
 
 To get syntax highlighting with line numbers in the Ghost editor:

@@ -157,6 +157,8 @@
     ul, ol
       line-height: $cell * 1.4
       padding-left: $cell * 2
+      ul, ol
+        margin-top: $cell
     blockquote
       border-left: solid 5px $brand-blue
       background-color: $bg-light
@@ -177,6 +179,8 @@
       background-color: $bg-light
       padding: $cell $cell * 2
       border-radius: 0
+      &, & code, & *
+        font-size: $cell * 0.7
       @media #{$handheld-portrait}
         &, & code, & *
           font-size: $cell * 0.6
