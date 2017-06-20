@@ -152,7 +152,7 @@
       & + h2, & + h3, & + h4, & + h5, & + h6
         padding-top: $cell
     h1, h2
-      &:before
+      &:not(.anchor):before
         color: $brand-blue
         content: '# '
     h2
@@ -294,7 +294,7 @@
       border-left: none
       right: 0
   background-color: $bg-light
-  padding: $cell / 2 $cell
+  padding: $cell / 3 $cell / 2
   margin: $cell / 2
   #disqus_thread
     a
