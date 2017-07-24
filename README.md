@@ -6,6 +6,10 @@ FoxyPanda is a personal blog based on [Ghost](https://ghost.org/) and is deploye
 
 These are just notes about the changes I made to the standard Ghost functionality. For reference, `helpers.js` contains all of the custom Handlebars helpers I have defined.
 
+### Testing locally
+
+Use `npm start` to test locally. `heroku local web` might not work.
+
 ### Compiling Sass
 
 All Sass files can be compiled by simply running `compass watch` in the root directory. `config.rb` contains all of necessary Compass configuration.`

@@ -98,9 +98,11 @@ $window.on('load', function () {
         $.each($postContentLinks, function (index, link) {
             var $link = $(link);
             var text = $link.text();
+            var href = $link.attr('href');
             if (/^~/.test(text)) {
                 $link.text(text.substr(1));
-            } else {
+            }
+            if (!/^#/.test(href)) {
                 $(link).attr('target', '_blank');
             }
         });
