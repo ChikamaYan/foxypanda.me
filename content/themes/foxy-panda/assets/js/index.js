@@ -17,6 +17,8 @@ $window = $(window);
 
 $window.on('load', function () {
 
+    console.log('Achievement Unlocked! > Open developer tools <');
+
     // Load the scripts and execute functions
     // defined in the post body
     var loadScripts = function (array, accumulator) {
@@ -87,7 +89,6 @@ $window.on('load', function () {
 
     }
 
-    console.log('ERqweqwe');
     if ($body.hasClass('post-template')) {
         var $content = $('.foxy-post-content');
 
