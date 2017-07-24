@@ -53,9 +53,11 @@ $$\LaTeX$$
 Links that open in a new window or the same window. Note that the tilde character will be stripped.
 
 ```markdown
-[New Window](#)
+[New Window](https://localhost/)
 
-[~Same Window](#)
+[~Same Window](https://localhost/)
+
+[Anchor links are ignored](#)
 ```
 
 ### Embedding JavaScript into pages
