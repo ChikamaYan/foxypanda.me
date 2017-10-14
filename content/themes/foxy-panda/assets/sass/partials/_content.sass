@@ -63,8 +63,6 @@
     font-weight: normal
     color: $brand-blue
 
-
-
 .foxy-post
   &-title
     padding: $cell
@@ -235,6 +233,11 @@
       line-height: $cell
       border-radius: 0
       height: $cell
+    .center-content
+      text-align: center
+    .border-child
+      & > *
+        border: solid 1px $brand-blue
     .video
       background-color: $bg-light
       padding-bottom: 56.25%
@@ -255,6 +258,8 @@
       border: none
       height: 2px
     img, video
+      & + img, & + video
+        margin-top: $cell
       border-radius: 5px
       max-width: 100%
       display: block

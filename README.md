@@ -71,3 +71,7 @@ window.scripts.push(function() {
     console.log('Hello World');
 }); // Will get executed after the above 2 scripts are loaded
 ```
+
+### Helper divs
+
+If something needs to be centred, it can be wrapped into a `.center-content` div.
