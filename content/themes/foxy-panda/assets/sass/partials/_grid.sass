@@ -17,8 +17,8 @@
       &:before
         background-color: $brand-blue
     &-inside
+      padding: 0 0 0 $post-image-width
       overflow: hidden
-      padding: 0
       &:before
         @include transform(rotate(45deg))
         right: -$cell * 1.25
@@ -28,57 +28,86 @@
         width: $cell * 2
         display: block
         content: ''
+    &:hover &-image
+      -webkit-filter: none
+      filter: none
+      opacity: 1
+    &-image
+      &-wrapper
+        border: solid 2px $bg-light
+        width: $post-image-width
+        position: absolute
+        bottom: 0
+        left: 0
+        top: 0
+      @include transition(all 200ms ease-in-out)
+      @include image('post-thumbnail.png')
+      -webkit-filter: grayscale(1)
+      -webkit-filter: grayscale(100%)
+      filter: gray
+      filter: grayscale(100%)
+      background-position: center
+      background-size: cover
+      opacity: 0.7
+      height: 100%
+      width: 100%
     &-title, &-excerpt, &-info
       margin: $cell
     &-excerpt
       text-align: justify
-
 
 @media #{$handheld-portrait}
   // Handheld Portrait
   .foxy-grid
     &-sizer, &-item-wrapper
       width: 100%
-    &-item-wrapper
-      &.wide
-        width: 100%
-      &.very-wide
-        width: 100%
+    &-item
+      &-inside
+        padding: 0
+      &-image-wrapper
+        display: none
+
 @media #{$handheld-landscape}
   // Handheld Landscape
   .foxy-grid
     &-sizer, &-item-wrapper
-      width: 50%
-    &-item-wrapper
-      &.wide
-        width: 100%
-      &.very-wide
-        width: 100%
+      //width: 50% -- No longer using a cool masonry grid
+      width: 100%
+    &-item
+      &-inside
+        padding: 0
+      &-image-wrapper
+        display: none
+
 @media #{$tablet-portrait}
   // Tablet Portrait
   .foxy-grid
     &-sizer, &-item-wrapper
-      width: 100% * 1/3
+      //width: 100% * 1/3 -- No longer using a cool masonry grid
+      width: 100%
     &-item-wrapper
       &.wide
         width: 100% * 2/3
       &.very-wide
         width: 100% * 3/3
+
 @media #{$default}
   // Default
   .foxy-grid
     &-sizer, &-item-wrapper
-      width: 25%
+      //width: 25% -- No longer using a cool masonry grid
+      width: 100%
     &-item-wrapper
       &.wide
         width: 50%
       &.very-wide
         width: 75%
+
 @media #{$large}
   // Large
   .foxy-grid
     &-sizer, &-item-wrapper
-      width: 20%
+      width: 50%
     &-item-wrapper
       &.wide
         width: 40%

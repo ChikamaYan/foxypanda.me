@@ -2,7 +2,9 @@
 
 <div class="foxy-introduction">
     <h1>Hello there!</h1>
-    <p>Welcome to my blog! My name is Tim and I'm a computer science student at University College London and California Institute of Technology. I mostly write about my studies and the projects I work on. Check out the <a href="/about/">About section</a> for more info.</p>
+    <p>Welcome to my blog! My name is Tim and I'm a computer science student at University College London and California
+        Institute of Technology. I mostly write about my studies and the projects I work on. Check out the <a
+                href="/about/">About section</a> for more info.</p>
 </div>
 
 <div class="foxy-content-bar-block foxy-content-menu-button hidden">{{> button}}</div>
@@ -18,9 +20,14 @@
 <div id="foxy-grid" class="foxy-grid">
     <div class="foxy-grid-sizer">&nbsp;</div>
     {{#foreach posts}}
-        <div class="foxy-grid-item-wrapper {{post_class}}{{masonry (foxyExcerpt (content words="100"))}}">
+        <!--<div class="foxy-grid-item-wrapper {{post_class}}{{masonry (foxyExcerpt (content words="100"))}}">-->
+        <div class="foxy-grid-item-wrapper {{post_class}}">
             <div class="foxy-grid-item {{post_class}}">
                 <a class="foxy-grid-item-inside foxy-btn" href="{{url}}">
+                    <div class="foxy-grid-item-image-wrapper">
+                        <div class="foxy-grid-item-image"
+                             {{#if image}}style="background-image: url({{image}})"{{/if}}></div>
+                    </div>
                     <h1 class="foxy-grid-item-title">{{title}}</h1>
                     <p class="foxy-grid-item-excerpt">
                         {{{foxyExcerpt (content words="100")}}}
