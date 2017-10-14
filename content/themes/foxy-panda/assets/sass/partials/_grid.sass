@@ -85,31 +85,15 @@
     &-sizer, &-item-wrapper
       //width: 100% * 1/3 -- No longer using a cool masonry grid
       width: 100%
-    &-item-wrapper
-      &.wide
-        width: 100% * 2/3
-      &.very-wide
-        width: 100% * 3/3
 
 @media #{$default}
   // Default
   .foxy-grid
     &-sizer, &-item-wrapper
-      //width: 25% -- No longer using a cool masonry grid
       width: 100%
-    &-item-wrapper
-      &.wide
-        width: 50%
-      &.very-wide
-        width: 75%
 
 @media #{$large}
   // Large
   .foxy-grid
     &-sizer, &-item-wrapper
-      width: 50%
-    &-item-wrapper
-      &.wide
-        width: 40%
-      &.very-wide
-        width: 60%
+      width: 100%
