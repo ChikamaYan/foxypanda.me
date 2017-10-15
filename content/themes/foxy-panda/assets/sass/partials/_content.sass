@@ -192,6 +192,10 @@
     ul, ol
       line-height: $cell * 1.4
       padding-left: $cell * 2
+      @media #{$handheld-portrait}
+        line-height: $cell * 1.1
+      @media #{$handheld-landscape}
+        line-height: $cell * 1.1
       li
         margin-bottom: $cell
       ul, ol
@@ -207,6 +211,10 @@
     *:not(pre) > code:not(.synlighter-syntax-code)
       background-color: $bg-light
       font-size: $cell * 0.65
+      @media #{$handheld-portrait}
+        font-size: $cell * 0.45
+      @media #{$handheld-landscape}
+        font-size: $cell * 0.45
       margin: 0 $cell / 4
       padding: $cell / 4
       color: $brand-blue
